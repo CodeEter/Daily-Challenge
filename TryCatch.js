@@ -1,9 +1,9 @@
-let json = '{"name":"John","age":30}';
+let json = "{bad json}";
 
-let user = JSON.parse(json);
-
-console.log(user.name);
-console.log(user.age);
-
-console.log(typeof user.name);
-console.log(typeof user.age);
+try {
+    let user = JSON.parse(json);
+    console.log(user);
+} catch (err) {
+    console.log(err.name);
+    console.log(err.message);
+}
