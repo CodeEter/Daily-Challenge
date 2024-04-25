@@ -1,8 +1,11 @@
-try {
-  console.log("try");
-  if (confirm('Make an error?')) BAD_CODE();
-} catch (err) {
-  console.log("catch");
-} finally {
-  console.log("finally");
+function func() {
+  try {
+    return 1;
+  } catch (err) {
+
+  } finally {
+    alert('finally');
+  }
 }
+
+alert(func());
