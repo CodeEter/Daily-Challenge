@@ -1,19 +1,15 @@
-"use strict";
-
-let json = '{ "age" : 30, "name": "nick"}';
+function readData() {
+  try {
+    blabla();
+  } catch (err) {
+    if (!(err instanceof SyntaxError)) {
+      throw err;
+    }
+  }
+}
 
 try {
-    let user = JSON.parse(json);
-    if (!user.name) {
-        throw new SyntaxError("Incomplete data: no name");
-    }
-    blabla();   //unexpected error
-
-    console.log(user.name);
+  readData();
 } catch (err) {
-    if (err instanceof SyntaxError) {
-        console.log("JSON Error: " + err.message);
-    } else {
-        throw err;
-    }
+  console.log("External catch got: " + err);
 }
