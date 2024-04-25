@@ -1,15 +1,8 @@
-function readData() {
-  try {
-    blabla();
-  } catch (err) {
-    if (!(err instanceof SyntaxError)) {
-      throw err;
-    }
-  }
-}
-
 try {
-  readData();
+  console.log("try");
+  if (confirm('Make an error?')) BAD_CODE();
 } catch (err) {
-  console.log("External catch got: " + err);
+  console.log("catch");
+} finally {
+  console.log("finally");
 }
