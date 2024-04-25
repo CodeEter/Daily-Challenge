@@ -1,15 +1,9 @@
-setTimeout(function () {
-    try {
-        noSuchVariable;
-    } catch {
-        console.log("error is caught here!");
-    }
-}, 1000);
+let json = '{"name":"John","age":30}';
 
-try {
-    setTimeout(function() {
-      noSuchVariable; // script will die here
-    }, 1000);
-  } catch (err) {
-    console.log( "won't work" );
-  }
+let user = JSON.parse(json);
+
+console.log(user.name);
+console.log(user.age);
+
+console.log(typeof user.name);
+console.log(typeof user.age);
