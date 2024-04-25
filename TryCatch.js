@@ -1,14 +1,11 @@
-let json = '{"age":27}';
+"use strict";
+let json = '{ "age" : 30 }';
 
 try {
-    let user = JSON.parse(json);
-
-    if(!user.name) {
-        throw new SyntaxError("Incomplete data:no name");
-    }
-
-    alert(user.name);
-} catch(err) {
+    user = JSON.parse(json);
+    console.log("Success");
+} catch (err) {
+    console.log(err);
     console.log(err.name);
-    console.log("JSON Error: " + err.message );
+    console.log(err.message);
 }
