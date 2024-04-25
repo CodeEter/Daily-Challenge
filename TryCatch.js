@@ -1,11 +1,12 @@
-try {
-  console.log("try");
-  throw new Error("an Error");
-} catch(err) {
-  if("can't handle the error"){
-    throw err;
+function func() {
+  try {
+    return 1;
+  } catch (err) {
+
+  } finally {
+    console.log('finally');
   }
-  console.log("err");
-} finally {
-  console.log("finally");
 }
+
+console.log( func() );
+
